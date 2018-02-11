@@ -28,7 +28,7 @@ loader.load('Models/monkey.json', handle_load);
 function handle_load(geometry, materials)
 {
     var material = new THREE.MeshNormalMaterial();
-    var mesh = new THREE.Mesh(geometry, materials);
+    var mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 }
 
