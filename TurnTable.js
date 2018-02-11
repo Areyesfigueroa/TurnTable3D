@@ -23,7 +23,7 @@ scene.add(light2);
 
 //MODEL
 var loader = new THREE.JSONLoader();
-loader.load('Models/model.json', handle_load);
+loader.load('Models/cube.json', handle_load);
 
 function handle_load(geometry, materials)
 {
