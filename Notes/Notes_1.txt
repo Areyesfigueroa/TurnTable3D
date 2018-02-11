@@ -1,0 +1,8 @@
+Object loading to three.js Notes:
+
+//Get the blender plugin from this link:
+https://github.com/mrdoob/three.js/trunk/utils/exporters/blender/addons/io_three
+
+//Blender Settings
+Change Type to Geometry
+Check Vertices, Normals, Faces, UVs, Apply Modifiers. Should be default
