@@ -27,6 +27,7 @@ loader.load('model.json', handle_load);
 
 function handle_load(geometry, materials)
 {
+    var material = new THREE.MeshNormalMaterial();
     var mesh = new THREE.Mesh(geometry, materials);
     scene.add(mesh);
 }
