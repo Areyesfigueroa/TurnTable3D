@@ -33,16 +33,6 @@ function handle_load(geometry, materials)
     scene.add(monkeyMesh);
 }
 
-function tableTurnMesh(mesh)
-{
-    if(!mesh)
-    {
-        return;
-    }
-
-    mesh.rotate.x += 0.01;
-}
-
 //RENDER LOOP
 render();
 
@@ -52,8 +42,8 @@ function render()
     //Animation Code goes here. Updates every page refresh.
     renderer.render(scene, camera);
 
-    tableTurnMesh(monkeyMesh);
-
+    monkeyMesh.rotate.x += 0.1;
+    
     requestAnimationFrame(render);
 
 }
