@@ -42,8 +42,10 @@ function render()
     //Animation Code goes here. Updates every page refresh.
     renderer.render(scene, camera);
 
-    monkeyMesh.rotate.x += 0.1;
-    
+    if(monkeyMesh)
+    {
+        monkeyMesh.rotate.x += 0.1;
+    }
     requestAnimationFrame(render);
 
 }
