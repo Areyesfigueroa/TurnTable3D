@@ -25,11 +25,22 @@ scene.add(light2);
 var loader = new THREE.JSONLoader();
 loader.load('Models/monkey.json', handle_load);
 
+var monkeyMesh;
 function handle_load(geometry, materials)
 {
     var material = new THREE.MeshNormalMaterial();
-    var mesh = new THREE.Mesh(geometry, material);
-    scene.add(mesh);
+    monkeyMesh = new THREE.Mesh(geometry, material);
+    scene.add(monkeyMesh);
+}
+
+function tableTurnMesh(mesh)
+{
+    if(!mesh)
+    {
+        return;
+    }
+
+    mesh.rotate.x += 0.01;
 }
 
 //RENDER LOOP
@@ -40,6 +51,8 @@ function render()
 {
     //Animation Code goes here. Updates every page refresh.
     renderer.render(scene, camera);
+
+    tableTurnMesh(monkeyMesh);
 
     requestAnimationFrame(render);
 
