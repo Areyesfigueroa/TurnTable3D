@@ -31,6 +31,9 @@ function handle_load(geometry, materials)
     var material = new THREE.MeshNormalMaterial();
     monkeyMesh = new THREE.Mesh(geometry, material);
     scene.add(monkeyMesh);
+
+    monkeyMesh.rotate.x += 0.1;
+    render();
 }
 
 //RENDER LOOP
@@ -41,11 +44,6 @@ function render()
 {
     //Animation Code goes here. Updates every page refresh.
     renderer.render(scene, camera);
-
-    if(monkeyMesh)
-    {
-        monkeyMesh.rotate.x += 0.1;
-    }
     requestAnimationFrame(render);
 
 }
