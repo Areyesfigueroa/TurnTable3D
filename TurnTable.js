@@ -25,11 +25,10 @@ scene.add(light2);
 var loader = new THREE.JSONLoader();
 loader.load('Models/monkey.json', handle_load);
 
-var monkeyMesh;
 function handle_load(geometry, materials)
 {
     var material = new THREE.MeshNormalMaterial();
-    monkeyMesh = new THREE.Mesh(geometry, material);
+    var monkeyMesh = new THREE.Mesh(geometry, material);
     scene.add(monkeyMesh);
 
     monkeyMesh.rotate.x += 0.1;
